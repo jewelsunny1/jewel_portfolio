@@ -3,31 +3,31 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 import App from './App';
-import AboutMe from './src/pages/AboutMe';
-import Portfolio from './src/pages/Portfolio';
-import Contact from './src/pages/Contact';
-import Resume from './src/pages/Resume';
+import AboutMe from './pages/AboutMe';
+import Portfolio from './pages/Portfolio';
+import Contact from './pages/Contact';
+import Resume from './pages/Resume';
 
 
 const router = createBrowserRouter([
   {
-    path: '/',
+    path: '/', 
     element: <App />,
     children: [
       {
-        index: true, // 'index: true' refers to rendering AboutMe at '/'
+        index: true, // 'index: true' refers to rendering AboutMe at '/' meaning this is technically the homepage
         element: <AboutMe />,
       },
       {
-        path:'/Portfolio',
+        path:'/portfolio',
         element:<Portfolio />,
       },
       {
-        path:'/Contact',
+        path:'/contact',
         element:<Contact />,
       },
       {
-        path:'/Resume',
+        path:'/resume',
         element:<Resume />,
       },
     ],
