@@ -1,7 +1,14 @@
 import React from "react";
+import Projects from '../components/Projects'
 
-export default function Portfolio (){
+const Portfolio =() =>{
   return(
-    <div> Portfolio </div>
-  )
-}
+    <div>
+      <h1>Portfolio</h1>
+      <Projects/>
+    </div>
+  );
+};
+
+export default Portfolio;
+  

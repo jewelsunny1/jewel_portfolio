@@ -1,7 +1,13 @@
 import React from "react";
+import resumePDF from "../assets/resume.txt";
 
-export default function Resume (){
+const Resume = () =>{
   return(
-    <div> Resume </div>
-  )
-}
+    <div>
+      <h2>Resume</h2>
+      <a href ={resumePDF}></a>
+    </div>
+  );
+};
+
+export default Resume;

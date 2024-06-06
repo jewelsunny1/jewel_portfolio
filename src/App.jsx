@@ -6,7 +6,10 @@ import Footer from './components/Footer'
 
 const style={
   page:{
-    backgroundColor: "lightblue"
+    backgroundColor: '#7ebdc2',
+    minHeight:'100vh',
+    display:'flex',
+    flexDirection:'column',
   }
 }
 

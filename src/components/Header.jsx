@@ -1,10 +1,8 @@
 import React from 'react';
-import Navbar from './Navbar'
 
 const Header = () => (
   <header>
-    <div className ="logo" > </div>
-    <Navbar/>
+    <div className ="logo" >Placeholder for logo </div>
   </header>
 );
 

@@ -1,5 +1,26 @@
 import React, {useState} from "react";
 
+const styles={
+  container:{
+    display:'flex',
+    flexDirection:'column',
+    alignItems:'center',
+    justifyContent:'center',
+    minHeight:'50 vh',
+    backgroundColor:'#7ebdc2'
+  },
+  form:{
+    width:'50%',
+    maxWidth:'700px',
+    backgroundColor:"#e0f7fa",
+    padding:'20px',
+    borderRadius:'8px',
+    color:'teal',
+    fontWeight:'bold'
+  },
+
+};
+
 const Contact = () => {
   const [formData, setFormData]= useState({name:'', email:'', message:''}); //remember formData is the current value which is useState({name:'', email:'', message:''});(our name, email, message inputs are blanked out intially)
 
@@ -21,42 +42,50 @@ const Contact = () => {
 
   const handleFormSubmit =(e) => {
     e.preventDefault(); //prevent form submission
-  }
+  setFormData ({name:'', email:'', message:''})//to clear form upon submission
+  };
+
 
   return(
-    <section>
+    <section style={styles.container}>
       <h2> Contact Me:</h2>
-      <form onSubmit= {handleFormSubmit}>
-      <div>
-        <label>Name</label>
+      <form onSubmit= {handleFormSubmit} style={styles.form}>
+      <div className="form-group">
+        <label htmlFor="name">Name</label>
         <input
         type="text"
         name= "name"
         value= {formData.name}
         onChange={handleChange}
         onBlur={handleError}
+        className="form-control"
+        id="name"
         />
       </div>
-      <div>
-        <label>Email</label>
+      <div className="form-group">
+        <label htmlFor="email">Email</label>
         <input
         type="email"
         name= "email"
         value= {formData.email}
         onChange={handleChange}
         onBlur={handleError}
+        className="form-control"
+        id="name"
         />
       </div>
-      <div>
-      <label>Message</label>
+      <div className="form-group">
+      <label htmlFor="message">Message</label>
         <input
         name= "message"
         value= {formData.message}
         onChange={handleChange}
         onBlur={handleError}
+        className="form-control"
+        id="name"
         /> 
       </div>
-      <button type="submit">SUBMIT </button>
+      <button type="submit" className="btn btn-outline-info">SUBMIT </button>
       </form>
     </section>
   )
