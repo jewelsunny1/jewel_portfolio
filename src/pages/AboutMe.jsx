@@ -30,7 +30,7 @@ const AboutMe =() => {
     <div style={styles.container}>
       <h2>About Me</h2>
       <div>
-        <img src="" alt="profile-pic" style={styles.image}/>
+        <img src="../../assets/images/#1.jpg" alt="profile-pic" style={styles.image}/>
         <p stlyle={styles.paragraph}>
         I am based in Dallas, TX, eager to change my career. Currently, enrolled in 3-month coding bootcamp in hopes of gaining valuable skills to help me as I take on this new journey!
         </p>

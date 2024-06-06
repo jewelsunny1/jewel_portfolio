@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+//below i have used some class names from bootstrap such as form-control, form-group, and className="btn btn-outline-info for submit buttom for styling and layout purposes
 
 const styles={
   container:{
@@ -16,9 +17,13 @@ const styles={
     padding:'20px',
     borderRadius:'8px',
     color:'teal',
-    fontWeight:'bold'
+    fontWeight:'thin'
   },
-
+  submitButton:{
+    marginTop:'8px',
+    display:'flex',
+    justifyContent:'center',
+  }
 };
 
 const Contact = () => {
@@ -85,7 +90,9 @@ const Contact = () => {
         id="name"
         /> 
       </div>
+      <div style={styles.submitButton}>
       <button type="submit" className="btn btn-outline-info">SUBMIT </button>
+      </div>
       </form>
     </section>
   )
